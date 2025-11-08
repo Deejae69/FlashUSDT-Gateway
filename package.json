@@ -1,0 +1,30 @@
+{
+  "name": "flashusdt-gateway",
+  "version": "1.0.0",
+  "description": "A seamless, secure, and high-speed solution for USDT transfers across TRC20, BEP20, ERC20, BTC, and Fantom networks",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "usdt",
+    "crypto",
+    "gateway",
+    "trc20",
+    "bep20",
+    "erc20",
+    "btc",
+    "fantom",
+    "blockchain"
+  ],
+  "author": "Deejae69",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

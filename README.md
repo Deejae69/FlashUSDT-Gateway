@@ -8,16 +8,52 @@
 
 ## 📜 **Table of Contents**
 
-1. [✨ Features](#-features)
-2. [🌐 Supported Wallets](#-supported-wallets)
-3. [🔗 Available Networks](#-available-networks)
-4. [🚀 Why Choose Flash USDT?](#-why-choose-flash-usdt)
-5. [📰 User Testimonials](#-user-testimonials)
-6. [🔍 Example Transactions](#-example-transactions)
-7. [⚡ Performance & Security](#-performance--security)
-8. [📸 Screenshots & Demos](#-screenshots--demos)
-9. [💬 Contact Us](#-contact-us)
-10. [📚 License](#-license)
+1. [🚀 Quick Start](#-quick-start)
+2. [✨ Features](#-features)
+3. [🌐 Supported Wallets](#-supported-wallets)
+4. [🔗 Available Networks](#-available-networks)
+5. [🚀 Why Choose Flash USDT?](#-why-choose-flash-usdt)
+6. [📰 User Testimonials](#-user-testimonials)
+7. [🔍 Example Transactions](#-example-transactions)
+8. [⚡ Performance & Security](#-performance--security)
+9. [📸 Screenshots & Demos](#-screenshots--demos)
+10. [🛠️ Developer Resources](#-developer-resources)
+11. [💬 Contact Us](#-contact-us)
+12. [📚 License](#-license)
+
+---
+
+## 🚀 **Quick Start**
+
+### For Developers
+
+```bash
+# Clone the repository
+git clone https://github.com/Deejae69/FlashUSDT-Gateway.git
+cd FlashUSDT-Gateway
+
+# Install dependencies
+npm install
+
+# Configure environment
+cp .env.example .env
+# Edit .env with your configuration
+
+# Start the gateway
+npm start
+```
+
+The gateway will start on `http://localhost:3000` with a RESTful API for all supported networks.
+
+### API Endpoints
+
+- **GET** `/api/networks` - List all supported networks
+- **GET** `/api/balance` - Check balance for an address
+- **POST** `/api/transfer` - Transfer USDT across networks
+- **GET** `/api/transaction/status` - Check transaction status
+- **GET** `/api/health` - Health check
+
+📖 See [DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md) for detailed API documentation and [EXAMPLES.md](EXAMPLES.md) for code examples.
 
 ---
 
@@ -105,6 +141,44 @@ Your transactions remain **private** with **no intermediaries**.
   <img width="250" src="https://i.ibb.co/KrtJyRX/Screenshot-2024-10-20-12-34-34-327-com-wallet-crypto-trustapp.jpg" alt="Flash USDT Screenshot">
   <img width="250" src="https://i.ibb.co/R4GNnhj/Screenshot-2024-10-20-12-34-13-931-com-wallet-crypto-trustapp.jpg" alt="Flash USDT Screenshot">
 </p>
+
+---
+
+## 🛠️ **Developer Resources**
+
+### Documentation
+
+- **[Developer Guide](DEVELOPER_GUIDE.md)** - Complete API documentation, configuration, and architecture
+- **[Usage Examples](EXAMPLES.md)** - Code examples in JavaScript, Python, and cURL
+- **[Configuration Template](.env.example)** - Environment variables and settings
+
+### Technical Stack
+
+- **Node.js** - Runtime environment
+- **Express.js** - RESTful API framework
+- **Modular Architecture** - Easy to extend with new networks
+- **Environment-based Configuration** - Secure and flexible setup
+
+### Integration
+
+The gateway provides a unified API interface across all supported networks:
+
+```javascript
+// Example: Check balance on any network
+GET /api/balance?network=erc20&address=0x742d35...
+
+// Example: Transfer USDT
+POST /api/transfer
+{
+  "network": "trc20",
+  "toAddress": "TXYZexample...",
+  "amount": 100
+}
+```
+
+### Contributing
+
+Contributions are welcome! Please check our documentation and feel free to submit pull requests.
 
 ---
 
