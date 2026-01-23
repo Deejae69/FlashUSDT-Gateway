@@ -19,6 +19,8 @@ DEFAULT_NETWORK_TIMEOUT_SECONDS = 30
 MAXIMUM_RETRY_ATTEMPTS = 3
 RETRY_DELAY_SECONDS = 5
 
+# Transaction validity period of 51 days balances security with flexibility
+# as specified in the FlashUSDT-Gateway requirements
 TRANSACTION_VALIDITY_PERIOD_DAYS = 51
 SUPPORTED_TOKEN_SYMBOLS = ['USDT', 'USDC', 'DAI', 'BTC']
 

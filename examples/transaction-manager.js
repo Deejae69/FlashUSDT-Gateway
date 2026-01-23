@@ -13,6 +13,8 @@ const MAXIMUM_TRANSACTION_AMOUNT_USDT = 100000;
 const MINIMUM_TRANSACTION_AMOUNT_USDT = 1;
 const DEFAULT_TRANSACTION_TIMEOUT_SECONDS = 300;
 const REQUIRED_CONFIRMATION_BLOCKS = 12;
+// Transaction validity period of 51 days balances security with flexibility
+// as specified in the FlashUSDT-Gateway requirements
 const TRANSACTION_VALIDITY_PERIOD_DAYS = 51;
 
 const SUPPORTED_NETWORK_TYPES = {
