@@ -1,5 +1,12 @@
 version: '3.8'
 
+# SECURITY NOTE: Before deploying to production:
+# 1. Set all passwords via environment variables (use .env file or secrets manager)
+# 2. Never commit actual passwords to version control
+# 3. Use strong, randomly generated passwords (minimum 32 characters)
+# 4. Enable SSL/TLS for all external connections
+# 5. Regularly rotate credentials
+
 services:
   # Application
   app:
@@ -35,7 +42,7 @@ services:
     environment:
       - POSTGRES_DB=flashusdt_gateway
       - POSTGRES_USER=flashusdt
-      - POSTGRES_PASSWORD=your_secure_password_here
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-CHANGE_ME_REQUIRED_SECURE_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -112,7 +119,7 @@ services:
     ports:
       - "3001:3000"
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-CHANGE_ME_REQUIRED_SECURE_PASSWORD}
     volumes:
       - grafana_data:/var/lib/grafana
     restart: unless-stopped
