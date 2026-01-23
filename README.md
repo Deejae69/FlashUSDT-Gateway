@@ -18,6 +18,7 @@
 8. [📸 Screenshots & Demos](#-screenshots--demos)
 9. [💬 Contact Us](#-contact-us)
 10. [📚 License](#-license)
+11. [🏗️ Developer Documentation](#️-developer-documentation)
 
 ---
 
@@ -113,6 +114,54 @@ Your transactions remain **private** with **no intermediaries**.
 For support, inquiries, or further information, reach out to us:
 
 - 📩 **Telegram:** [@flashbyMiguel](https://t.me/flashbyMiguel)
+
+---
+
+## 🏗️ **Developer Documentation**
+
+For developers implementing this gateway, comprehensive documentation is available:
+
+- **[Performance Optimization Guidelines](PERFORMANCE.md)** - Best practices for high-performance implementation
+- **[Architecture Guide](ARCHITECTURE.md)** - Recommended system architecture and code structure
+- **[Environment Configuration](.env.example)** - Configuration template for all networks
+- **[Docker Deployment](docker-compose.yml)** - Production-ready containerized deployment
+
+### Quick Start for Developers
+
+```bash
+# Clone the repository
+git clone https://github.com/Deejae69/FlashUSDT-Gateway.git
+cd FlashUSDT-Gateway
+
+# Copy environment configuration
+cp .env.example .env
+# Edit .env with your RPC URLs and configuration
+
+# Install dependencies
+npm install
+
+# Run database migrations
+npm run migrate
+
+# Start development server
+npm run dev
+
+# Run tests
+npm test
+
+# Run performance benchmarks
+npm run benchmark
+```
+
+### Performance Targets
+
+- **Transaction Submission**: < 200ms
+- **Balance Check**: < 100ms per network
+- **Multi-Network Balance**: < 300ms (parallel)
+- **API Response Time**: < 500ms (99th percentile)
+- **Throughput**: 100+ transactions/second
+
+See [PERFORMANCE.md](PERFORMANCE.md) for detailed optimization strategies and [ARCHITECTURE.md](ARCHITECTURE.md) for implementation patterns.
 
 ---
 
