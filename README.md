@@ -12,7 +12,7 @@
 4. [🚀 Why Choose Flash USDT?](#-why-choose-flash-usdt)
 5. [📰 User Testimonials](#-user-testimonials)
 6. [⚡ Performance & Security](#-performance--security)
-7. [📸 Screenshots](#screenshots)
+7. [📸 Screenshots](#-screenshots)
 8. [💬 Contact Us](#-contact-us)
 9. [📚 License](#-license)
 
