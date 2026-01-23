@@ -2,6 +2,8 @@
 
 This directory contains example code files that demonstrate proper naming conventions for the FlashUSDT-Gateway project. These examples serve as templates for writing clean, maintainable code with descriptive variable and function names.
 
+> **⚠️ Important:** These are demonstration examples showcasing naming conventions and code structure. They include placeholder/mock classes (like `NetworkProvider`, `WalletService`, `BlockchainProvider`) that would be implemented in actual production code. Use these as templates for structure and naming patterns, not as executable code.
+
 ---
 
 ## 📁 Files in This Directory

@@ -3,6 +3,10 @@ Example: Wallet Service with Descriptive Naming (Python)
 
 This file demonstrates proper naming conventions for the FlashUSDT-Gateway project in Python.
 All variable names, function names, and class names follow the guidelines in NAMING_CONVENTIONS.md
+
+NOTE: This is a demonstration example. The BlockchainProvider class referenced in the usage
+example is a placeholder representing the actual blockchain provider implementation that
+would be created in a real application.
 """
 
 from typing import Dict, List, Optional
@@ -453,10 +457,17 @@ class WalletService:
 # ============================================================================
 
 def demonstrate_wallet_service_usage():
-    """Demonstrate usage of WalletService with descriptive naming"""
+    """
+    Demonstrate usage of WalletService with descriptive naming
+    
+    NOTE: This is a demonstration example. BlockchainProvider is a placeholder
+    class representing the actual blockchain provider that would be implemented
+    and imported from another module in a real application.
+    """
     
     # Initialize service
-    blockchain_provider = BlockchainProvider()
+    # NOTE: In production, BlockchainProvider would be imported from its module
+    blockchain_provider = BlockchainProvider()  # Placeholder for actual implementation
     wallet_service = WalletService(blockchain_provider)
     
     # Define wallet parameters with clear names

@@ -411,10 +411,17 @@ class TransactionManager {
 // USAGE EXAMPLE
 // ============================================================================
 
+/**
+ * NOTE: This is a demonstration example showing proper naming conventions.
+ * NetworkProvider and WalletService are placeholder classes representing
+ * the blockchain provider and wallet service that would be implemented
+ * in a real application.
+ */
 async function demonstrateTransactionManagerUsage() {
   // Initialize services with descriptive variable names
-  const networkProvider = new NetworkProvider();
-  const walletService = new WalletService();
+  // NOTE: These classes would be imported from their respective modules in production
+  const networkProvider = new NetworkProvider(); // Placeholder for actual implementation
+  const walletService = new WalletService(); // Placeholder for actual implementation
   const transactionManager = new TransactionManager(networkProvider, walletService);
 
   // Define transaction parameters with clear names
