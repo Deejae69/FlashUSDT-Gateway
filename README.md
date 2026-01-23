@@ -1,23 +1,20 @@
-# FlashUSDT-Gateway
- A seamless, secure, and high-speed solution for USDT transfers across TRC20, BEP20, ERC20, BTC, and Fantom networks. Designed for effortless integration, low-cost transactions, and multi-wallet compatibility.
-# 🔥 **Flash USDT** — The Fastest & Most Secure Crypto Transfers Across TRC20, BEP20, ERC20, BTC, and Fantom
+# 🔥 **Flash USDT** — The Fastest & Most Secure Crypto Transfers
 
-**Flash USDT** revolutionizes crypto transactions by offering **fast, secure, and low-cost transfers** across multiple networks. Whether you're sending **USDT, USDC, BTC, DAI**, or other major cryptocurrencies, Flash USDT ensures **seamless integration with all major wallets** and a frictionless experience.
+**Flash USDT** revolutionizes crypto transactions by offering **fast, secure, and low-cost transfers** across TRC20, BEP20, ERC20, BTC, and Fantom networks. Whether you're sending **USDT, USDC, BTC, DAI**, or other major cryptocurrencies, Flash USDT ensures **seamless integration with all major wallets** and a frictionless experience.
 
 ---
 
 ## 📜 **Table of Contents**
 
 1. [✨ Features](#-features)
-2. [🌐 Supported Wallets](#-supported-wallets)
-3. [🔗 Available Networks](#-available-networks)
-4. [🚀 Why Choose Flash USDT?](#-why-choose-flash-usdt)
-5. [📰 User Testimonials](#-user-testimonials)
-6. [🔍 Example Transactions](#-example-transactions)
-7. [⚡ Performance & Security](#-performance--security)
-8. [📸 Screenshots & Demos](#-screenshots--demos)
-9. [💬 Contact Us](#-contact-us)
-10. [📚 License](#-license)
+2. [🔗 Available Networks](#-available-networks)
+3. [🚀 Why Choose Flash USDT?](#-why-choose-flash-usdt)
+4. [📰 User Testimonials](#-user-testimonials)
+5. [🔍 Example Transactions](#-example-transactions)
+6. [⚡ Performance & Security](#-performance--security)
+7. [📸 Screenshots](#-screenshots)
+8. [💬 Contact Us](#-contact-us)
+9. [📚 License](#-license)
 
 ---
 
@@ -25,26 +22,10 @@
 
 - **🚀 Multi-Network Support**: Compatible with **TRC20, ERC20, BEP20, BTC, and Fantom** networks.
 - **💰 Ultra-Low Fees**: Affordable transaction costs for all transfers.
-- **🌍 Universal Wallet Compatibility**: Works with all major wallets.
+- **🌍 Universal Wallet Compatibility**: Works with all major wallets including Trust Wallet, MetaMask, Atomic Wallet, Binance Spot Wallet, Exodus, Coinomi, Ledger & Trezor.
 - **⏳ Instant Transfers**: Lightning-fast transactions across supported blockchains.
 - **✔️ Trusted & Reliable**: 51 days of proven and secure operations.
 - **🛡️ Strong Security**: Validity for 51 days ensures flexibility while maintaining safety.
-
----
-
-## 🌐 **Supported Wallets**
-
-Flash USDT works with all major wallets, including:
-
-- **Trust Wallet**
-- **MetaMask**
-- **Atomic Wallet**
-- **Binance Spot Wallet**
-- **Exodus Wallet**
-- **Coinomi**
-- **Ledger & Trezor Hardware Wallets**
-
-> Wherever you trade or store crypto, Flash USDT ensures seamless compatibility.
 
 ---
 
@@ -98,7 +79,7 @@ Your transactions remain **private** with **no intermediaries**.
 
 ---
 
-## 📸 **Screenshots **
+## 📸 **Screenshots**
 <p align="center">
   <img width="250" src="https://i.ibb.co/6RTkQMT/Screenshot-2024-10-20-12-33-54-431-com-wallet-crypto-trustapp.jpg" alt="Flash USDT Screenshot">
   <img width="250" src="https://i.ibb.co/8PNJ6jQ/Screenshot-2024-10-20-12-35-19-677-com-wallet-crypto-trustapp.jpg" alt="Flash USDT Screenshot">
