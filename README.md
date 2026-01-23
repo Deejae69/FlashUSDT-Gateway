@@ -12,7 +12,7 @@
 4. [🚀 Why Choose Flash USDT?](#-why-choose-flash-usdt)
 5. [📰 User Testimonials](#-user-testimonials)
 6. [⚡ Performance & Security](#-performance--security)
-7. [📸 Screenshots](#-screenshots-)
+7. [📸 Screenshots](#screenshots)
 8. [💬 Contact Us](#-contact-us)
 9. [📚 License](#-license)
 
@@ -93,7 +93,7 @@ Your transactions remain **private** with **no intermediaries**.
 
 ---
 
-## 📸 **Screenshots **
+## 📸 **Screenshots**
 <p align="center">
   <img width="250" src="https://i.ibb.co/6RTkQMT/Screenshot-2024-10-20-12-33-54-431-com-wallet-crypto-trustapp.jpg" alt="Flash USDT Wallet Balance">
   <img width="250" src="https://i.ibb.co/8PNJ6jQ/Screenshot-2024-10-20-12-35-19-677-com-wallet-crypto-trustapp.jpg" alt="Flash USDT Transaction Details">
