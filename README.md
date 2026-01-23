@@ -11,11 +11,10 @@
 3. [🔗 Available Networks](#-available-networks)
 4. [🚀 Why Choose Flash USDT?](#-why-choose-flash-usdt)
 5. [📰 User Testimonials](#-user-testimonials)
-6. [🔍 Example Transactions](#-example-transactions)
-7. [⚡ Performance & Security](#-performance--security)
-8. [📸 Screenshots & Demos](#-screenshots--demos)
-9. [💬 Contact Us](#-contact-us)
-10. [📚 License](#-license)
+6. [⚡ Performance & Security](#-performance--security)
+7. [📸 Screenshots](#-screenshots-)
+8. [💬 Contact Us](#-contact-us)
+9. [📚 License](#-license)
 
 ---
 
