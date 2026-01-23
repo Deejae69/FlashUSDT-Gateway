@@ -1,0 +1,143 @@
+version: '3.8'
+
+# SECURITY NOTE: Before deploying to production:
+# 1. Set all passwords via environment variables (use .env file or secrets manager)
+# 2. Never commit actual passwords to version control
+# 3. Use strong, randomly generated passwords (minimum 32 characters)
+# 4. Enable SSL/TLS for all external connections
+# 5. Regularly rotate credentials
+
+services:
+  # Application
+  app:
+    build: .
+    container_name: flashusdt-gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=postgres
+      - REDIS_HOST=redis
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - flashusdt-network
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '1'
+          memory: 1G
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: flashusdt-postgres
+    environment:
+      - POSTGRES_DB=flashusdt_gateway
+      - POSTGRES_USER=flashusdt
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-CHANGE_ME_REQUIRED_SECURE_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - flashusdt-network
+    command: >
+      postgres
+      -c max_connections=200
+      -c shared_buffers=256MB
+      -c effective_cache_size=1GB
+      -c maintenance_work_mem=64MB
+      -c checkpoint_completion_target=0.9
+      -c wal_buffers=16MB
+      -c default_statistics_target=100
+      -c random_page_cost=1.1
+      -c effective_io_concurrency=200
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: flashusdt-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - flashusdt-network
+    command: >
+      redis-server
+      --maxmemory 512mb
+      --maxmemory-policy allkeys-lru
+      --save 60 1000
+      --appendonly yes
+
+  # Nginx Load Balancer (optional, for production)
+  nginx:
+    image: nginx:alpine
+    container_name: flashusdt-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - app
+    restart: unless-stopped
+    networks:
+      - flashusdt-network
+
+  # Monitoring with Prometheus (optional)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: flashusdt-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    restart: unless-stopped
+    networks:
+      - flashusdt-network
+    profiles:
+      - monitoring
+
+  # Grafana for Visualization (optional)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: flashusdt-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-CHANGE_ME_REQUIRED_SECURE_PASSWORD}
+    volumes:
+      - grafana_data:/var/lib/grafana
+    restart: unless-stopped
+    networks:
+      - flashusdt-network
+    profiles:
+      - monitoring
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+
+networks:
+  flashusdt-network:
+    driver: bridge
