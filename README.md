@@ -16,8 +16,9 @@
 6. [🔍 Example Transactions](#-example-transactions)
 7. [⚡ Performance & Security](#-performance--security)
 8. [📸 Screenshots & Demos](#-screenshots--demos)
-9. [💬 Contact Us](#-contact-us)
-10. [📚 License](#-license)
+9. [👨‍💻 For Developers](#-for-developers)
+10. [💬 Contact Us](#-contact-us)
+11. [📚 License](#-license)
 
 ---
 
@@ -105,6 +106,46 @@ Your transactions remain **private** with **no intermediaries**.
   <img width="250" src="https://i.ibb.co/KrtJyRX/Screenshot-2024-10-20-12-34-34-327-com-wallet-crypto-trustapp.jpg" alt="Flash USDT Screenshot">
   <img width="250" src="https://i.ibb.co/R4GNnhj/Screenshot-2024-10-20-12-34-13-931-com-wallet-crypto-trustapp.jpg" alt="Flash USDT Screenshot">
 </p>
+
+---
+
+## 👨‍💻 **For Developers**
+
+### Code Quality & Best Practices
+
+This project emphasizes **clean, maintainable code** with descriptive naming conventions. When contributing to or integrating with FlashUSDT-Gateway, please follow our comprehensive guidelines:
+
+#### 📖 Documentation
+- **[Naming Conventions](./NAMING_CONVENTIONS.md)** - Comprehensive guide for variable, function, and class naming
+- **[Contributing Guide](./CONTRIBUTING.md)** - How to contribute with best practices
+- **[Code Examples](./examples/)** - Reference implementations demonstrating proper naming
+
+#### ✅ Key Principles
+- **Descriptive Names**: Use clear, self-documenting names that convey purpose and intent
+- **Consistency**: Follow established patterns throughout the codebase
+- **Security First**: Always validate inputs and handle errors gracefully
+- **Network-Specific Clarity**: Include network type in names (e.g., `trc20Address`, `erc20Balance`)
+
+#### 🎯 Quick Example
+
+**❌ Avoid:**
+```javascript
+function send(addr, amt) {
+  let f = calc(amt);
+  return process(addr, amt - f);
+}
+```
+
+**✅ Prefer:**
+```javascript
+function sendUsdtTransaction(recipientAddress, transferAmountUsdt) {
+  const networkFeeUsdt = calculateTransactionFee(transferAmountUsdt);
+  const netTransferAmount = transferAmountUsdt - networkFeeUsdt;
+  return processTransaction(recipientAddress, netTransferAmount);
+}
+```
+
+See our [examples directory](./examples/) for complete implementations with proper naming conventions.
 
 ---
 
